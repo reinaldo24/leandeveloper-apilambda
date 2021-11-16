@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: perfanalytics-api/package-lock.json
     - run: npm ci
     - name: Serverless
       uses: serverless/github-action@v1.53.0
